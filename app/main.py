@@ -1,7 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 import sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates")
 
 
 # Criar a tabela LIVROS caso não exista
@@ -28,7 +28,7 @@ init_db()
 # Página inicial
 @app.route("/")
 def home():
-    return "Bem-vindo à Biblioteca Digital! Doe e explore livros gratuitamente."
+    return render_template("index.html")
 
 
 # Rota para cadastrar um livro

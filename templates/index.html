@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bem-vindo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        font-family: Arial, sans-serif;
+      }
+
+      .message-box {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2rem 3rem;
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 80%;
+        animation: fadeIn 1s ease-in;
+      }
+
+      .message-box h1 {
+        color: #4a4a4a;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+      }
+
+      .message-box p {
+        color: #666;
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="message-box">
+      <h1>L-VnW API</h1>
+      <p>
+        Já que pode escrever qualquer coisa, queria dizer que amo muito minha
+        namorada..
+      </p>
+      <h3>Te amo muito Leticia!</h3>
+    </div>
+  </body>
+</html>
