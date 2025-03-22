@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "87dca55f-a4c8-4e1d-8496-32b0d46c317a",
+		"name": "L-VnW API",
+		"description": "Coleção de testes para a API Biblioteca Digital desenvolvida em Flask.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39621158"
+	},
+	"item": [
+		{
+			"name": "Exibir página inicial",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Exibe uma página inicial com uma mensagem personalizada."
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Livro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"1984\",\n    \"categoria\": \"Ficção\",\n    \"autor\": \"George Orwell\",\n    \"imagem_url\": \"https://example.com/1984.jpg\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/doar",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"doar"
+					]
+				},
+				"description": "Adiciona um novo livro ao banco de dados."
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/livros",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"livros"
+					]
+				},
+				"description": "Obtém a lista de todos os livros cadastrados."
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Livro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/livros/:id",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"livros",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				},
+				"description": "Remove um livro do banco com base no ID fornecido."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
