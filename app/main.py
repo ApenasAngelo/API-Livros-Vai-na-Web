@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 import sqlite3
+from flask_cors import CORS
 
 app = Flask(__name__, template_folder="../templates")
+CORS(app)
 
 
 # Criar a tabela LIVROS caso não exista
